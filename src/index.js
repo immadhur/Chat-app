@@ -7,7 +7,7 @@ const { generateMessage } = require('../utils/messages');
 
 const app = express();
 const server = http.createServer(app);
-const port = process.env.PORT | 3000;
+const port = process.env.PORT || 3000;
 const io = socketio(server);
 publicDir = path.join(__dirname, '../public')
 app.use(express.static(publicDir));
